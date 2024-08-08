@@ -1,0 +1,109 @@
+.containerMainCardHome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+
+    h3 {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 1.7rem;
+        font-weight: 400;
+        padding-bottom: .5rem;
+    }
+
+    .containerMap {
+        width: 90%;
+        height: 20vh;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        /* styles.css */
+        .custom-marker {
+            width: 24px;
+            height: 24px;
+            background-color: rgb(0, 115, 255);
+            /* Colore del marker */
+            border-radius: 50%;
+            /* Forma circolare */
+            border: 3px solid white;
+            /* Bordo bianco */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+        }
+
+        
+
+    }
+
+    .card {
+        display: flex;
+        width: 90%;
+        height: 20vh;
+        border: .1px solid rgb(201, 201, 201);
+        border-radius: 1rem;
+
+        .imgCont {
+            width: 30%;
+            height: 100%;
+            border-radius: 1rem 0 0 1rem;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .textCont {
+            width: 70%;
+            border-radius: 0 2rem 2rem 0;
+
+            .top {
+                padding: 1rem;
+                width: 100%;
+                height: 50%;
+                border-radius: 0 2rem 0 0;
+
+                h4 {
+                    font-weight: 500;
+                    padding-bottom: .3rem;
+                }
+
+                p {
+                    color: gray;
+                    font-size: .8rem;
+                    letter-spacing: .5px;
+                }
+
+            }
+
+            .bottom {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: center;
+                padding: 0 1rem;
+                width: 100%;
+                height: 50%;
+                border-radius: 0 0 2rem 0;
+
+                p {
+                    font-weight: 500;
+                    font-size: .9rem;
+                    padding: .2rem 0;
+
+                    i {
+                        padding: 0 .5rem;
+                    }
+                }
+
+            }
+        }
+    }
+}

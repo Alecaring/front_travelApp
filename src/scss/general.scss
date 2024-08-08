@@ -1,0 +1,102 @@
+@import './_partials/Header.scss';
+@import './_partials/banner.scss';
+@import './_partials/Search.scss';
+@import './_partials/icons.scss';
+@import './_partials/card.scss';
+@import './_partials/filter.scss';
+@import './_partials/AppFormInputsFlight.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.none {
+    display: none;
+}
+
+$base-color: #ddd;
+$shine-color: #e8e8e8;
+$animation-duration: 1.6s;
+$avatar-offset: 52px + 16px;
+
+@mixin background-gradient {
+    background-image: linear-gradient(90deg, $base-color 0px, $shine-color 40px, $base-color 80px);
+    background-size: 600px;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: .1px solid gray;
+    border-radius: 1rem;
+}
+
+.post {
+    
+
+    .avatar {
+        float: left;
+        width: 30%;
+    height: 100%;
+        background-color: #ccc;
+        border-radius: 25%;
+        margin: 8px;
+
+        @include background-gradient;
+        animation: shine-avatar $animation-duration infinite linear;
+    }
+
+    .line {
+        float: left;
+        width: 140px;
+        height: 16px;
+        margin-top: 12px;
+        border-radius: 7px;
+
+        @include background-gradient;
+        animation: shine-lines $animation-duration infinite linear;
+    }
+
+    .avatar+.line {
+        margin-top: 11px;
+        width: 100px;
+    }
+
+    .line~.line {
+        background-color: #ddd;
+    }
+}
+
+@keyframes shine-lines {
+    0% {
+        background-position: -100px;
+    }
+
+    40%,
+    100% {
+        background-position: 140px;
+    }
+}
+
+@keyframes shine-avatar {
+    0% {
+        background-position: -100px + $avatar-offset;
+    }
+
+    40%,
+    100% {
+        background-position: 140px + $avatar-offset;
+    }
+}
